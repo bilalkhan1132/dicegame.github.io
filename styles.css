@@ -1,10 +1,12 @@
+body {
+  background-color: #393E46;
+}
 .container1{
   /* background-color: white; */
-  width: 92%;
+  width: 90%;
   margin: auto;
   padding: 3%;
   text-align: center;
-  background-color: #393E46;
 }
 
 
@@ -23,9 +25,6 @@
   margin: auto;
 }
 
-body {
-  background-color: #393E46;
-}
 
 h1 {
   margin: 30px;
@@ -92,14 +91,14 @@ footer {
    /* margin: auto; */
    font-family: 'Lobster', cursive;
    text-shadow: 7px 0 #232931;
-   font-size: 4rem;
+   font-size: 6rem;
    color: #4ECCA3;
    padding-bottom: 4%;
  }
 
 
  .game-first{
-   font-size: 3rem;
+   font-size: 6rem;
  }
 
 
@@ -115,12 +114,12 @@ footer {
   border-radius: 30px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 60px;
+  font-size: 30px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   position: absolute;
   top: 73%;
-  left: 43%;
+  left: 41%;
   transform: translate(-60,-60);
   margin-left: auto;
   margin-right: auto;
