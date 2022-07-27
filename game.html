@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.html">
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+  <style>
+    #container3{
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+
+
+  </head>
+  <body>
+
+
+    <div class="container">
+      <h1 class="game-first">Press Below Button To Play The Game.</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="images/dice6.png">
+      </div>
+    <div id="container3">
+      <button class="play_button" onclick="Play()">Click Me</button>
+      
+    </div>
+    </div>
+    <!-- <a class="button btn btn-primary btn-lg btn-block btn-outline-dark" href="index.js" role="button">Play Me.</a> -->
+
+    <!-- <script src="index.js" charset="utf-8"></script> -->
+
+
+
+     <script>
+      var yourname = prompt("Write Your Name As A Player 1");
+
+       // butn.style.background = "url(play)";
+
+       //If player 1 wins
+      function Play(){
+
+        var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
+
+        var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
+
+        var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
+
+        var image1 = document.querySelectorAll("img")[0];
+
+        image1.setAttribute("src", randomImageSource);
+
+
+        var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+        var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+        document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+        if (randomNumber1 > randomNumber2) {
+         document.querySelector("h1").innerHTML = "🚩 " + yourname + " Wins!";
+       }
+       else if (randomNumber2 > randomNumber1) {
+         document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+       }
+       else {
+         document.querySelector("h1").innerHTML = "Draw!";
+       }
+     }
+     </script>
+      </body>
+
+      <footer>
+        <p>© Copyright Bilal Ahmed Shahab Company Of Web And App Development</p>
+      </footer>
+    </html>
